@@ -25,8 +25,8 @@ export class HomeComponent implements OnInit {
 
     this.http.get('https://localhost:5001/api/users').subscribe({
       next: response => this.users = response,
-      error: error => { console.log('oops I crapped'); console.log(error); },
-      complete: () => console.log('fux yeah it works!!')
+      error: error => { console.log('Error calling get users'); console.log(error); },
+      complete: () => console.log('Get Users Complete')
     });
 
     console.log('ng on init finished!');
